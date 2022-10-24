@@ -6,16 +6,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-version: "3.0"
-
-services:
-  bookApi:
-    build: 
-      context: ./
-      dockerfile: Dockerfile
-    ports:
-      - 8080:8080
-
 jobs: 
   
   build:
