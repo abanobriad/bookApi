@@ -12,7 +12,7 @@ RUN mvn install
 # Stage 2 (to create a downsized "container executable", ~87MB)
 FROM openjdk:8-jre-alpine3.7
 WORKDIR /root/
-COPY --from=builder /usr/src/myapp/target/bookApi.jar .
+COPY --from=builder /usr/src/myapp/target/bookApi-1.jar .
 
 EXPOSE 8123
-ENTRYPOINT ["java", "-jar", "./target/bookApi.jar"]
+ENTRYPOINT ["java", "-jar", "./bookApi-1.jar"]
