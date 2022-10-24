@@ -15,4 +15,4 @@ WORKDIR /root/
 COPY --from=builder /usr/src/myapp/target/bookApi.jar .
 
 EXPOSE 8123
-ENTRYPOINT ["java", "-jar", "./bookApi.jar"]
+ENTRYPOINT ["java", "-jar", "./target/bookApi.jar"]
