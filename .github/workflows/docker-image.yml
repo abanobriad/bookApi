@@ -15,5 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: ./mvn install
-      run: docker build -f Dockerfile ... -t smartdubaibookapi
+      run: docker build -f Dockerfile -t smartdubaibookapi
