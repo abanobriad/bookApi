@@ -1,0 +1,9 @@
+package com.bookstore.book.repository;
+
+import com.bookstore.book.model.Book;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface BookRepository extends JpaRepository<Book, Integer> {
+	
+	Book findByName(String bookName);
+}
