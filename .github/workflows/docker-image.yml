@@ -11,8 +11,8 @@ jobs:
   build:
 
     runs-on: windows-latest
-
+ 
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build -f Dockerfile -t smartdubaibookapi
+      run: docker build -f Dockerfile -t smartdubaibookapi .
