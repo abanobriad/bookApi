@@ -15,8 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: |
-   while read -r cmd
-        do
-          eval sudo $cmd
-        done < <(Rscript -e 'cat(remotes::system_requirements("ubuntu", "20.04"), sep = "\n")')
+      run: docker build . --file Dockerfile --tag smartdubaibookapi:$(date +%s)
